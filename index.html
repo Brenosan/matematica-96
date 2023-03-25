@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Questionário de Matemática</title>
+  </head>
+  <body>
+    <h1>Questionário de Matemática</h1>
+    <form>
+      <h2>Pessoa 1</h2>
+      <p>2+2 = <input type="text" name="p1q1" /></p>
+      <p>3*3 = <input type="text" name="p1q2" /></p>
+      <p>10/2 = <input type="text" name="p1q3" /></p>
+      <p>7-4 = <input type="text" name="p1q4" /></p>
+      <p>4^2 = <input type="text" name="p1q5" /></p>
+      <h2>Pessoa 2</h2>
+      <p>2+2 = <input type="text" name="p2q1" /></p>
+      <p>3*3 = <input type="text" name="p2q2" /></p>
+      <p>10/2 = <input type="text" name="p2q3" /></p>
+      <p>7-4 = <input type="text" name="p2q4" /></p>
+      <p>4^2 = <input type="text" name="p2q5" /></p>
+      <button type="submit">Enviar</button>
+    </form>
+    <script>
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const p1q1 = parseInt(form.elements.p1q1.value);
+        const p1q2 = parseInt(form.elements.p1q2.value);
+        const p1q3 = parseInt(form.elements.p1q3.value);
+        const p1q4 = parseInt(form.elements.p1q4.value);
+        const p1q5 = parseInt(form.elements.p1q5.value);
+        const p2q1 = parseInt(form.elements.p2q1.value);
+        const p2q2 = parseInt(form.elements.p2q2.value);
+        const p2q3 = parseInt(form.elements.p2q3.value);
+        const p2q4 = parseInt(form.elements.p2q4.value);
+        const p2q5 = parseInt(form.elements.p2q5.value);
+        let score1 = 0;
+        let score2 = 0;
+        if (p1q1 === 4) score1++;
+        if (p1q2 === 9) score1++;
+        if (p1q3 === 5) score1++;
+        if (p1q4 === 3) score1++;
+        if (p1q5 === 16) score1++;
+        if (p2q1 === 4) score2++;
+        if (p2q2 === 9) score2++;
+        if (p2q3 === 5) score2++;
+        if (p2q4 === 3) score2++;
+        if (p2q5 === 16) score2++;
+        alert(`Pontuação da Pessoa 1: ${score1}\nPontuação da Pessoa 2: ${score2}`);
+      });
+    </script>
+  </body>
+</html>
